@@ -15,9 +15,11 @@ package com.example.mykotlinlearning.challenges
 
 val firstFourDigits = listOf<String>("1111", "1232", "5627", "8121")
 val creditCardNumberInput = "1111-2321-7625-1234"
+val date ="12/23"
 
 fun main() {
     println("${isCreditCardValid(creditCardNumberInput)}")
+    println("")
 }
 
 fun isCreditCardValid(creditCardNumberInput: String): String {
@@ -27,15 +29,8 @@ fun isCreditCardValid(creditCardNumberInput: String): String {
                 return "Invalid Credit Card Number"
             }
             try {
-                val expiryMonth = creditCardNumberInput.split("-").last().substring(0, 2).toInt()
-                val expiryYear = creditCardNumberInput.split("-").last().substring(2, 4).toInt()
-                if (!(0..99).contains(expiryYear) or !(1..12).contains(expiryMonth)) {
-                    return "Invalid Credit Card Number"
-                } else {
-                    "Valid Credit Card Number"
                 }
             } catch (ex: Exception) {
-                "Invalid Credit Card Number"
             }
         }
 }
