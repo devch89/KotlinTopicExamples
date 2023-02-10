@@ -19,7 +19,7 @@ val date ="12/23"
 
 fun main() {
     println("${isCreditCardValid(creditCardNumberInput)}")
-    println("")
+    println("Date is Valid: ${isDateValid}")
 }
 
 fun isCreditCardValid(creditCardNumberInput: String): String {
@@ -29,8 +29,23 @@ fun isCreditCardValid(creditCardNumberInput: String): String {
                 return "Invalid Credit Card Number"
             }
             try {
+                // todo check card conditions
                 }
             } catch (ex: Exception) {
+                //todo catch if conditions not met
+            }
+        }
+}fun isDatealid(dateInput: String): String {
+    return date.contains(date.split("/").first())
+        .let { isDateAccepted ->
+            if (!isDateAccepted) {
+                return "Invalid Date "
+            }
+            try {
+                // todo date conditions
+                }
+            } catch (ex: Exception) {
+                //todo catch if conditions not met
             }
         }
 }
